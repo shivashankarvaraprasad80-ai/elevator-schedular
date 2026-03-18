@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: white;
+}
+
+.container {
+    padding: 20px;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tabs button {
+    flex: 1;
+    padding: 10px;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    border: none;
+    color: white;
+    border-radius: 8px;
+}
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+}
+
+/* Cards */
+.card {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+/* Inputs */
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 10px;
+    background: #00c6ff;
+    border: none;
+    border-radius: 8px;
+}
+
+/* Table */
+table {
+    width: 100%;
+    margin-top: 10px;
+}
+#building {
+    position: relative;
+    width: 120px;
+    height: 480px;
+    margin: 30px auto;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+}
+
+.floor {
+    height: 40px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+/* ELEVATOR */
+#elevator {
+    width: 30px;
+    height: 30px;
+    background: cyan;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    border-radius: 5px;
+}
+.tabs button.active {
+background: #00c6ff;
+box-shadow:0 0 10px cyan; 
+}

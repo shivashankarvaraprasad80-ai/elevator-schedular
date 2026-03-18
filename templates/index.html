@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Elevator Scheduling Simulator</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1>Disk Scheduling Algorithm Simulator</h1>
+
+<!-- TOP BUTTONS -->
+<div class="container">
+
+    <!-- TOP TABS -->
+    <div class="tabs">
+        <button onclick ="setScenario(event,'app')">Application Loading</button>
+        <button onclick="setScenario(event,'file')">File Downloading</button>
+        <button onclick="setScenario(event,'db')">Database Requests</button>
+    </div>
+
+    <!-- MAIN GRID -->
+    <div class="grid">
+
+        <!-- LEFT PANEL -->
+        <div class="card">
+            <h2>Select Scenario</h2>
+
+            <label>Algorithm</label>
+            <select id="algorithm">
+                <option>SCAN</option>
+                <option>C-SCAN</option>
+                <option>LOOK</option>
+                <option>C-LOOK</option>
+            </select>
+
+            <label>Initial Position</label>
+            <input type="number" id="head">
+
+            <label>Requests</label>
+            <input type="text" id="requests">
+
+            <button onclick="runSimulation()">Run Simulation</button>
+        </div>
+
+        <!-- RIGHT PANEL -->
+        <div class="card">
+            <h2>Head Movement Visualization</h2>
+
+            <img id="graph">
+
+            <p id="sequence"></p>
+            <p id="movement"></p>
+
+            <h3>Algorithm Performance</h3>
+            <table>
+                <tr><th>Algorithm</th><th>Movement</th></tr>
+                <tr><td>SCAN</td><td id="scan"></td></tr>
+                <tr><td>C-SCAN</td><td id="cscan"></td></tr>
+                <tr><td>LOOK</td><td id="look"></td></tr>
+                <tr><td>C-LOOK</td><td id="clook"></td></tr>
+            </table>
+        </div>
+
+    </div>
+    <h2 style="text-align:center; margin-top:30px;">Elevator Visualization</h2>
+
+<div id="building">
+
+    <div class="floor">12</div>
+    <div class="floor">11</div>
+    <div class="floor">10</div>
+    <div class="floor">9</div>
+    <div class="floor">8</div>
+    <div class="floor">7</div>
+    <div class="floor">6</div>
+    <div class="floor">5</div>
+    <div class="floor">4</div>
+    <div class="floor">3</div>
+    <div class="floor">2</div>
+    <div class="floor">1</div>
+
+    <div id="elevator"></div>
+
+</div>
+
+</div>
+<script src="/static/script.js"></script>
+
+</body>
+</html>
